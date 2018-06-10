@@ -8,11 +8,13 @@ import { HttpModule } from '@angular/http';
 
 
 import { ImageService } from './services/image.service';
+import { ImageComponent } from './image/image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ImageListingComponent
+    ImageListingComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,14 @@
+<div class="card">
+  <img class="card-img-top" src="{{ image.webformatURL }}" alt="Card image cap">
+  <div class="card-body">
+    <span *ngFor="let tag of image.tagsArray">
+      <span class="badge badge-primary">{{ tag }}</span>
+    </span>
+    <h5 class="card-title">{{ image.type }}</h5>
+    <button type="button" class="btn btn-primary">
+      Likes
+      <span class="badge badge-light">{{ image.likes }}</span>
+      <span class="sr-only">unread messages</span>
+    </button>
+  </div>
+</div>
