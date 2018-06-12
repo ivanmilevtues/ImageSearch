@@ -5,10 +5,17 @@
       <span class="badge badge-primary">{{ tag }}</span>
     </span>
     <h5 class="card-title">{{ image.type }}</h5>
+    <p>
+      Posted by:
+      <i class="fas fa-user"></i> {{ image.user}}
+    </p>
     <button type="button" class="btn btn-primary">
-      Likes
+      <i class="far fa-thumbs-up"></i>
       <span class="badge badge-light">{{ image.likes }}</span>
-      <span class="sr-only">unread messages</span>
+    </button>
+    <button type="button" class="btn btn-danger">
+      <i class="far fa-heart"></i>
+      <span class="badge badge-light">{{ image.favorites }}</span>
     </button>
   </div>
 </div>
