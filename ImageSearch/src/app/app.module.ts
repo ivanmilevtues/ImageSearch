@@ -9,12 +9,14 @@ import { HttpModule } from '@angular/http';
 
 import { ImageService } from './services/image.service';
 import { ImageComponent } from './image/image.component';
+import { FilterByPipe } from './pipes/filter-by.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ImageListingComponent,
-    ImageComponent
+    ImageComponent,
+    FilterByPipe
   ],
   imports: [
     BrowserModule,

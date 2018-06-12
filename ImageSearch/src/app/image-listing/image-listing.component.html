@@ -1,5 +1,13 @@
 <div class="container">
-  <span *ngFor="let image of images">
-      <app-image [image]="image" class="col-sm-4"></app-image>
-  </span>
+  <div class="row">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Search by tags" aria-label="Search by tags" aria-describedby="basic-addon1" [(ngModel)]="sortString">
+      <div class="input-group-append">
+        <span class="input-group-text"><i class="fas fa-search"></i></span>
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let image of images | filterBy[sortString]">
+    <app-image [image]="image" class="col-sm-4"></app-image>
+  </div>
 </div>
